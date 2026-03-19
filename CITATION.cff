@@ -3,6 +3,8 @@ title: Pythai
 message: "If you use this project, please cite it using the metadata below."
 type: software
 authors:
+  - name: OteEnded
+    email: ratnaritjumnong@gmail.com
   - name: Pythai Contributors
 repository-code: "https://github.com/OteEnded/Pythai"
 license: Apache-2.0

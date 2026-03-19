@@ -115,6 +115,11 @@ python -m twine upload dist/*
 - กรุณาเก็บไฟล์ `LICENSE` และ `NOTICE` ไว้เมื่อมีการแจกจ่ายต่อ
 - หากใช้งานในงานวิจัย/บทความ แนะนำให้อ้างอิงจากไฟล์ `CITATION.cff`
 
+## Credit
+
+- Maintainer: OteEnded
+- Contact: ratnaritjumnong@gmail.com
+
 ## แนวทาง naming
 
 - ใช้คำไทยความหมายตรง เช่น `พิมพ์`, `รับค่า`, `จำนวนเต็ม`, `จำนวนจริง`
