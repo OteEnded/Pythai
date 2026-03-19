@@ -1,0 +1,123 @@
+Project handoff for next AI (latest)
+
+Updated at:
+2026-03-19
+
+Project name:
+Pythai
+
+Current workspace root (before user renames folder):
+c:\data\thai python
+
+Repository:
+https://github.com/OteEnded/Pythai
+
+Main branch and release status:
+- Branch: main
+- Latest commits:
+	- c574ba3 by Ote[chore]: add maintainer credit and contact metadata
+	- e70d7bd by Ote[chore]: migrate to Apache-2.0 and add attribution metadata
+	- 2e862f0 by Ote[chore]: initialize Pythai structure and PyPI-ready packaging setup
+- Tag: v0.1.0
+- GitHub Release exists: v0.1.0
+- Release assets uploaded:
+	- pythai-0.1.0-py3-none-any.whl
+	- pythai-0.1.0.tar.gz
+
+Maintainer credit (important):
+- Name: OteEnded
+- Email: ratnaritjumnong@gmail.com
+- Credit/attribution was added to:
+	- pyproject.toml (authors)
+	- README.md (Credit section)
+	- NOTICE
+	- CITATION.cff
+
+License state:
+- Current license: Apache-2.0
+- Files:
+	- LICENSE (Apache 2.0 text)
+	- NOTICE (attribution)
+	- CITATION.cff (citation metadata)
+
+Packaging state (PyPI-ready baseline):
+- pyproject.toml exists and builds correctly
+- Build backend: setuptools
+- Package name on PyPI: pythai
+- py-modules come from libs/:
+	- ไพท่อน, ไพท่อน_builtins, คณิต, เวลา, สุ่ม, สถิติ, เจสัน, เรกซ์, เส้นทาง, ซีเอสวี
+- Last validation performed:
+	- python -m build => success
+	- python -m twine check dist/* => passed
+
+Project structure (organized):
+- libs/      main modules
+- tests/     test scripts
+- examples/  usage examples
+- tools/     utility/debug scripts
+- docs/      handoff notes
+
+Current key files:
+- README.md
+- pyproject.toml
+- LICENSE
+- NOTICE
+- CITATION.cff
+- CHANGELOG.md
+
+Important module coverage already implemented:
+- Builtins wrapper: libs/ไพท่อน.py, libs/ไพท่อน_builtins.py
+- Math: libs/คณิต.py
+- Date/time + sleep: libs/เวลา.py
+- Random: libs/สุ่ม.py
+- Statistics: libs/สถิติ.py
+- JSON: libs/เจสัน.py
+- Regex: libs/เรกซ์.py
+- File/Path: libs/เส้นทาง.py
+- CSV: libs/ซีเอสวี.py
+
+Known caveats for next AI:
+1) Unicode normalization in Thai identifiers
+- Some visually similar Thai words can exist in different Unicode forms.
+- Compatibility aliases are intentionally present in some modules.
+
+2) Naming typo to consider later
+- In libs/เวลา.py there is function name มะรุ่งนี้ in API/export.
+- This is likely a typo/awkward naming and may be cleaned later with backward-compatible alias.
+
+3) Minor cleanup candidates (not blockers)
+- libs/เวลา.py has some unused imports.
+- docs/ older wording may still mention the old project name in some historical notes.
+
+What has already been done and should not be re-done blindly:
+- Do NOT re-initialize git.
+- Do NOT recreate tag v0.1.0.
+- GitHub release v0.1.0 already exists and has assets.
+
+If continuing work in a new chat/session:
+1. Verify current folder path after rename and open correct root.
+2. Run smoke checks:
+	 - python examples/y.py
+	 - python tests/test_data_libs.py
+3. If metadata changes:
+	 - update pyproject.toml + README.md + CHANGELOG.md together.
+4. Before next release:
+	 - bump version in pyproject.toml
+	 - rebuild dist
+	 - twine check
+	 - create tag and release notes
+
+Release command references:
+- Build:
+	python -m build
+- Check:
+	python -m twine check dist/*
+- Upload TestPyPI:
+	python -m twine upload --repository testpypi dist/*
+- Upload PyPI:
+	python -m twine upload dist/*
+
+Context intent from user:
+- Keep the library practical and fun.
+- Current function coverage is enough for now.
+- Prefer incremental updates over big rewrites.
